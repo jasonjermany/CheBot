@@ -39,7 +39,6 @@ client.once('ready', () => {
 client.login(token);
 
 const beef = new db.table('beef')
-const marius = new db.table('marius')
 client.on('message', async (message) => {
 
     function dupeInc(obj,word){
@@ -55,7 +54,6 @@ client.on('message', async (message) => {
         }
     }
     dupeInc(beef,'beef');
-    dupeInc(marius,'marius');
     
 
     if (!message.content.startsWith(prefix) || message.author.bot) return;
